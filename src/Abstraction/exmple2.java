@@ -15,8 +15,7 @@ class PNB extends Bank{
 }
 public class exmple2 {
     public static void main(String[] args) {
-    Bank b;
-    b = new SBI();
+    Bank b = new SBI();
     System.out.println("SBI rate of Interest- " + b.getRateOfInterest()+"%");
     b = new PNB();
     System.out.println("PNB rate of Interest - " + b.getRateOfInterest()+"%");

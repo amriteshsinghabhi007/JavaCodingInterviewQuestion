@@ -14,7 +14,8 @@ class Student{
         name = n;
     }
     //method to display values
-    void display(){System.out.println(rollno+" "+name+" "+college);}
+    void display(){System.out.println(rollno+" "+name+" "+college);
+    }
 }
 public class StaticMethod {
     public static void main(String[] args) {

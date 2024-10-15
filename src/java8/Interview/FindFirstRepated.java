@@ -15,7 +15,6 @@ public class FindFirstRepated {
                 .filter(e->e.getValue() > 1L)
                 .map(e->e.getKey())
                 .findFirst().get();
-
         System.out.println(result);
     }
 }
