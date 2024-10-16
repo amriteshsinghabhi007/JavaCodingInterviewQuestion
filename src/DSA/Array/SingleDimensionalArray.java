@@ -1,4 +1,4 @@
-package Array;
+package DSA.Array;
 
 public class SingleDimensionalArray {
     int arr [] = null;

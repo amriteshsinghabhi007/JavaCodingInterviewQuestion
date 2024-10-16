@@ -1,6 +1,4 @@
-package Array;
-
-import java.util.Arrays;
+package DSA.Array;
 
 public class TwoDimensionalArray2 {
     int[][] arr;
