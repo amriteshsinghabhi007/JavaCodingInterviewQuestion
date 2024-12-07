@@ -12,7 +12,7 @@ public class DeSerialization {
         try {
             FileInputStream fis = new FileInputStream(fileName);// read from the file
             ObjectInputStream ois = new ObjectInputStream(fis);
-            Student obj = (Student)ois.readObject();
+            StudentTransient obj = (StudentTransient)ois.readObject();
 
             fis.close();
             ois.close();

@@ -6,7 +6,7 @@ import java.io.*;
 //use ObjectOutputStream class and method writeObject for Serialization
 public class Serialization {
     public static void main(String[] args) {
-       Student s1 = new Student();
+        StudentTransient s1 = new StudentTransient();
        s1.studentId = 1;
        s1.name = "Amritesh";
        s1.mark = 80;
