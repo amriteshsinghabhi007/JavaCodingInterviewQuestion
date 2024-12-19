@@ -9,7 +9,7 @@ public class StringJoning {
         List<String> ListJoiner = Arrays.asList("Jeera","Azure","Trello","Jenkins");
         String ListJoinerResult =
                 ListJoiner.stream()
-                        .collect(Collectors.joining("-> ", "[","]"));
+                        .collect(Collectors.joining("->", "[","]"));
         System.out.println(ListJoinerResult);
     }
 }
