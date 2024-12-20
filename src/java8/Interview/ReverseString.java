@@ -8,7 +8,7 @@ public class ReverseString {
     public static void main(String[] args) {
         String sentence = "Hello World"; //
         // 1. dlroW olleH
-        String reverseString= Stream.of(sentence).map(string -> new StringBuilder(string).reverse())
+        String reverseString= Stream.of(sentence).map(word -> new StringBuilder(word).reverse())
                 .collect(Collectors.joining(" "));
         System.out.println(reverseString);
 
