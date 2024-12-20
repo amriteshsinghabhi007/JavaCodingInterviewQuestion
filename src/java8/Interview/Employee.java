@@ -146,6 +146,12 @@ class Employee {
         for(Map.Entry<String,Long> entry : countByDept.entrySet()){
             System.out.println(entry.getKey() + " : " + entry.getValue());
         }
+        //7.1 department name with employee
+        Map<String, List<Employee>> countByDept1 = empList.stream().collect(Collectors.groupingBy(Employee::getDeptName));
+        countByDept1.forEach((deptName,employeeList)->{
+            System.out.println("Department: " +deptName);
+            employeeList.forEach(System.out::println);
+        });
 
         //8.Find oldest employee.
         Optional<Employee> oldestEmp = empList.stream().max(Comparator.comparingInt(Employee::getAge));
@@ -156,5 +162,8 @@ class Employee {
         Optional<Employee> youngestEmp = empList.stream().filter(e->e.getGender() == "F").min(Comparator.comparingInt(Employee::getAge));
         Employee youngestEmployee = youngestEmp.get();
         System.out.println("Youngest female employee details:: \n" + youngestEmployee);
+
+        //10.
+
     }
 }
