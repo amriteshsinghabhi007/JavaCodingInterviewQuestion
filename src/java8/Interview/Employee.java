@@ -163,7 +163,26 @@ class Employee {
         Employee youngestEmployee = youngestEmp.get();
         System.out.println("Youngest female employee details:: \n" + youngestEmployee);
 
-        //10.
+        //10. Find the employee which name start with A
+        System.out.println("Name start with A: ");
+        empList.stream().filter(x->x.getName().startsWith("A")).collect(Collectors.toList()).forEach(System.out::println);
 
+        //11.Find Highest salary in the organisation.
+        Optional<Employee> highestSalary = empList.stream().sorted(Comparator.comparingDouble(Employee::getSalary).reversed()).findFirst();
+        Employee highestSalaryEmp = highestSalary.get();
+        System.out.println("Highest salary in the organisation : \n" + highestSalaryEmp);
+
+        //12. Find second Highest salary in the organisation.
+        Optional<Employee> secondHighestSalary = empList.stream().sorted(Comparator.comparingDouble(Employee::getSalary).reversed()).skip(1).findFirst();
+        Employee secondHighestSalaryEmp = secondHighestSalary.get();
+        System.out.println("Second Highest salary in the organisation : \n" + secondHighestSalaryEmp);
+
+        //13. Find the salary is greater than equal 150 and less than 150
+
+        Map<Boolean, List<Employee>> collect = empList.stream().collect(Collectors.partitioningBy(e -> e.getSalary() >= 150));
+        System.out.println("salary is greater than equal 150 : \n");
+        collect.get(true).forEach(System.out::println);
+        System.out.println("salary is less than 150 : \n");
+        collect.get(false).forEach(System.out::println);
     }
 }
