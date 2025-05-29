@@ -23,6 +23,11 @@ public class maps {
            System.out.println(e.getKey());
            System.out.println(e.getValue());
        }
+
+       for (Map.Entry<String,Integer> e : map.entrySet()){
+           System.out.println(e.getValue());
+           System.out.println(e.getKey());
+       }
        //remove
         map.remove("Aus");
         System.out.println(map);
